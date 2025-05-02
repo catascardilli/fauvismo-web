@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sus Obras - Fauvismo</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"> 
+      <img src="imagenes/Logo.png" alt="Logo Fauvismo" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Su Historia</a></li>
+        <li><a href="fauves.html">Los Fauves</a></li>
+        <li><a href="obras.html" class="activo">Sus Obras</a></li>
+        <li><a href="lenguaje.html">Su Lenguaje</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="obras">
+    <h1>Obras en estado salvaje</h1>
+    <div class="galeria-obras">
+        <div class="obra" data-index="0">
+          <img src="imagenes/obra1.png" alt="Mujer con sombrero">
+          <div class="info-hover">
+            <h3>Mujer con sombrero</h3>
+            <p>Henri Matisse, 1905</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="1">
+          <img src="imagenes/obra2.png" alt="La alegría de vivir">
+          <div class="info-hover">
+            <h3>La alegría de vivir</h3>
+            <p>Henri Matisse, 1906</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="2">
+          <img src="imagenes/obra3.png" alt="Lujo, calma y voluptuosidad">
+          <div class="info-hover">
+            <h3>Lujo, calma y voluptuosidad</h3>
+            <p>Henri Matisse, 1904</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="3">
+          <img src="imagenes/obra4.png" alt="La ventana abierta">
+          <div class="info-hover">
+            <h3>La ventana abierta</h3>
+            <p>Henri Matisse, 1905</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="4">
+          <img src="imagenes/obra5.png" alt="Retrato de vivir">
+          <div class="info-hover">
+            <h3>Retrato de vivir</h3>
+            <p>André Derain, 1905</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="5">
+          <img src="imagenes/obra6.png" alt="El puente de Charing Cross">
+          <div class="info-hover">
+            <h3>El puente de Charing Cross</h3>
+            <p>André Derain, 1906</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="6">
+          <img src="imagenes/obra7.png" alt="Baile de soldado en Suresnes">
+          <div class="info-hover">
+            <h3>Baile de soldado en Suresnes</h3>
+            <p>André Derain, 1903</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="7">
+          <img src="imagenes/obra8.png" alt="La curva del camino">
+          <div class="info-hover">
+            <h3>La curva del camino</h3>
+            <p>André Derain, 1906</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="8">
+          <img src="imagenes/obra9.png" alt="Veleros de papel">
+          <div class="info-hover">
+            <h3>Veleros de papel</h3>
+            <p>Maurice de Vlaminck, 1908</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="9">
+          <img src="imagenes/obra10.png" alt="Chaval, étang d' Ursine">
+          <div class="info-hover">
+            <h3>Chaval, étang d' Ursine</h3>
+            <p>Maurice de Vlaminck, 1905</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="10">
+          <img src="imagenes/obra11.png" alt="Notre Dame en invierno">
+          <div class="info-hover">
+            <h3>Notre Dame en invierno</h3>
+            <p>Albert Marquet, 1908</p>
+          </div>
+        </div>
+      
+        <div class="obra" data-index="11">
+          <img src="imagenes/obra12.png" alt="Notre Dame">
+          <div class="info-hover">
+            <h3>Notre Dame</h3>
+            <p>Albert Marquet, 1904</p>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </main>
+
+  <div id="modalObra" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imagenGrande" />
+    <div id="descripcionObra"></div>
+    <a class="flecha izquierda">&#10094;</a>
+    <a class="flecha derecha">&#10095;</a>
+  </div>
+
+  <footer>
+    <p>© 2025 - Sitio educativo sobre el Fauvismo | Diseñado por Catalina Scardilli</p>
+    <p>
+      <a href="https://www.instagram.com/byktalina" target="_blank">
+        <i class="fab fa-instagram"></i> @byktalina
+      </a> |
+      <a href="mailto:catalinascardilli@gmail.com">
+        <i class="fas fa-envelope"></i> catalinascardilli@gmail.com
+      </a>
+    </p>
+    <p class="frase-footer">"El color es un medio para influir directamente en el alma" – Matisse</p>
+  </footer>
+
+  <script>
+    const obras = document.querySelectorAll('.obra');
+    const modal = document.getElementById('modalObra');
+    const modalImg = document.getElementById('imagenGrande');
+    const descripcion = document.getElementById('descripcionObra');
+    const cerrar = document.querySelector('.cerrar');
+    const flechaIzq = document.querySelector('.izquierda');
+    const flechaDer = document.querySelector('.derecha');
+
+    const obrasInfo = [
+  {
+    src: 'imagenes/obra1.png',
+    titulo: 'Mujer con sombrero',
+    autor: 'Henri Matisse',
+    año: '1905',
+  },
+  {
+    src: 'imagenes/obra2.png',
+    titulo: 'La alegría de vivir',
+    autor: 'Henri Matisse',
+    año: '1906',
+  },
+  {
+    src: 'imagenes/obra3.png',
+    titulo: 'Lujo, calma y voluptuosidad',
+    autor: 'Henri Matisse',
+    año: '1904',
+  },
+  {
+    src: 'imagenes/obra4.png',
+    titulo: 'La ventana abierta',
+    autor: 'Henri Matisse',
+    año: '1905',
+  },
+  {
+    src: 'imagenes/obra5.png',
+    titulo: 'Retrato de vivir',
+    autor: 'André Derain',
+    año: '1905',
+  },
+  {
+    src: 'imagenes/obra6.png',
+    titulo: 'El puente de Charing Cross',
+    autor: 'André Derain',
+    año: '1906',
+  },
+  {
+    src: 'imagenes/obra7.png',
+    titulo: 'Baile de soldados en Suresnes',
+    autor: 'André Derain',
+    año: '1903',
+  },
+  {
+    src: 'imagenes/obra8.png',
+    titulo: 'La curva del camino',
+    autor: 'André Derain',
+    año: '1906',
+  },
+  {
+    src: 'imagenes/obra9.png',
+    titulo: 'Veleros de papel',
+    autor: 'Maurice de Vlaminck',
+    año: '1908',
+  },
+  {
+    src: 'imagenes/obra10.png',
+    titulo: 'Chaval, étang d’Urçine',
+    autor: 'Maurice de Vlaminck',
+    año: '1905',
+  },
+  {
+    src: 'imagenes/obra11.png',
+    titulo: 'Notre Dame en invierno',
+    autor: 'Albert Marquet',
+    año: '1908',
+  },
+  {
+    src: 'imagenes/obra12.png',
+    titulo: 'Notre Dame',
+    autor: 'Albert Marquet',
+    año: '1904',
+  }
+];
+
+    let indiceActual = 0;
+
+    obras.forEach((obra, i) => {
+      obra.addEventListener('click', () => {
+        mostrarModal(i);
+      });
+    });
+
+    function mostrarModal(index) {
+      indiceActual = index;
+      const obra = obrasInfo[index];
+      modalImg.src = obra.src;
+      descripcion.innerHTML = `<h3>${obra.titulo}</h3><p>${obra.autor}, ${obra.año}</p>`;
+      modal.style.display = 'flex';
+    }
+
+    cerrar.onclick = () => (modal.style.display = 'none');
+    flechaDer.onclick = () => {
+      indiceActual = (indiceActual + 1) % obrasInfo.length;
+      mostrarModal(indiceActual);
+    };
+    flechaIzq.onclick = () => {
+      indiceActual = (indiceActual - 1 + obrasInfo.length) % obrasInfo.length;
+      mostrarModal(indiceActual);
+    };
+    window.onclick = (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+    };
+  </script>
+</body>
+</html>
+
