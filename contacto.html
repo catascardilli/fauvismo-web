@@ -10,7 +10,7 @@
 <body>
   <header>
     <a href="index.html">
-      <img src="imagenes/Logo.png" alt="Logo Fauvismo" class="logo">
+      <img src="imagenes/logo.png" alt="Logo Fauvismo" class="logo">
     </a>
     <nav>
       <ul>
@@ -30,18 +30,22 @@
       <p>"El arte empieza donde las palabras no alcanzan"</p>
 
       <!-- Formulario dentro de formulario-contacto -->
-<form action="gracias.html" method="post">
-    <label for="nombre">Nombre (o pseudónimo artístico):</label>
-    <input type="text" id="nombre" name="nombre" required>
-  
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required>
-  
-    <label for="mensaje">¿Qué emoción te despierta el Fauvismo?</label>
-    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-  
-    <button type="submit" class="boton">Enviar</button>
-  </form>
+      <form action="gracias.html" method="post">
+        <label for="nombre">Nombre (o pseudónimo artístico):</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Loulou, Ana P., El Fiera" required>
+      
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ej: ejemplo@mail.com" required>
+      
+        <label for="localidad">Localidad:</label>
+        <input type="text" id="localidad" name="localidad" placeholder="Ej: Rosario, Córdoba, Palermo" required>
+      
+        <label for="mensaje">¿Qué emoción te despierta el Fauvismo?</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos qué sentís al ver estas obras..." required></textarea>
+      
+        <button type="submit" class="boton">Enviar</button>
+      </form>
+      
   
     </section>
   </main>
